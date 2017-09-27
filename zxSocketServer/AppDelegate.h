@@ -1,11 +1,3 @@
-//
-//  AppDelegate.h
-//  zxSocketServer
-//
-//  Created by 张 玺 on 12-3-24.
-//  Copyright (c) 2012年 张玺. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 #import "GCDAsyncSocket.h"
 
@@ -15,6 +7,8 @@
     GCDAsyncSocket *s;
     GCDAsyncSocket *s1;
     bool s_ocp;
+    bool s_received_mark;
+    bool s_file_trans_mark;
     bool s1_ocp;
 }
 @property(strong)  GCDAsyncSocket *socket;
