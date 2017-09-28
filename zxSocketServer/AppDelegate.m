@@ -10,7 +10,7 @@
 @synthesize socket;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    port.stringValue = @"1234";
+    port.stringValue = @"10086";
 }
 -(void)addText:(NSString *)str
 {
@@ -18,6 +18,35 @@
 }
 - (IBAction)listen:(id)sender {
     NSLog(@"listen");
+    //在这里获取应用程序Documents文件夹里的文件及文件夹列表
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [documentPaths objectAtIndex:0];
+    NSError *error = nil;
+    NSArray *fileList = [[NSArray alloc] init];
+    //fileList便是包含有该文件夹下所有文件的文件名及文件夹名的数组
+    
+    fileList = [fileManager contentsOfDirectoryAtPath:@"/Users/hzzhangshuangli/Downloads/" error:&error];
+    
+        
+    NSMutableArray *dirArray = [[NSMutableArray alloc] init];
+    BOOL isDir = NO;
+    //在上面那段程序中获得的fileList中列出文件夹名
+    for (NSString *file in fileList) {
+        NSString *path = [documentDir stringByAppendingPathComponent:file];
+        
+        [fileManager fileExistsAtPath:path isDirectory:(&isDir)];
+        //if (isDir)
+        if ([file.pathExtension compare:@"dmg" options:NSCaseInsensitiveSearch] == NSOrderedSame)   //指定扩展名
+        {
+            NSString *theFileName = [[file lastPathComponent] stringByDeletingPathExtension];  //stringByDeletingPathExtension去掉扩展名  lastPathComponent文件名
+            [dirArray addObject:theFileName];
+        }
+        isDir = NO;
+    }
+    NSLog(@"Every Thing in the dir:%@",fileList);
+    NSLog(@"All folders:%@",dirArray);
     s_ocp = false;
     s1_ocp = false;
     s_file_trans_mark = false;
@@ -110,6 +139,7 @@
                 dispatch_async(queue,//dispatch_get_main_queue(),
                                ^{
                                    [self sendTxtFile:@"/Users/hzzhangshuangli/Documents/test.txt" withSender:s];
+                                
                                });
             });
         }
