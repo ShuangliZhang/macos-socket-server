@@ -17,6 +17,7 @@
 		33569F90151DCA3800605257 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33569F8E151DCA3800605257 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		33569F96151DCC0E00605257 /* NetFS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33569F95151DCC0E00605257 /* NetFS.framework */; };
 		33569F9D151DCE4300605257 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33569F9C151DCE4300605257 /* Security.framework */; };
+		BF2065481F7CE63F00B3C979 /* FileTransferFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2065471F7CE63E00B3C979 /* FileTransferFormat.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		33569F8E151DCA3800605257 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		33569F95151DCC0E00605257 /* NetFS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetFS.framework; path = System/Library/Frameworks/NetFS.framework; sourceTree = SDKROOT; };
 		33569F9C151DCE4300605257 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BF2065461F7CE63E00B3C979 /* FileTransferFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTransferFormat.h; sourceTree = "<group>"; };
+		BF2065471F7CE63E00B3C979 /* FileTransferFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileTransferFormat.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,8 @@
 		33569F74151DC9C700605257 /* zxSocketServer */ = {
 			isa = PBXGroup;
 			children = (
+				BF2065461F7CE63E00B3C979 /* FileTransferFormat.h */,
+				BF2065471F7CE63E00B3C979 /* FileTransferFormat.m */,
 				33569F8B151DCA3800605257 /* GCDAsyncSocket.h */,
 				33569F8C151DCA3800605257 /* GCDAsyncSocket.m */,
 				33569F8D151DCA3800605257 /* GCDAsyncUdpSocket.h */,
@@ -185,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33569F7B151DC9C700605257 /* main.m in Sources */,
+				BF2065481F7CE63F00B3C979 /* FileTransferFormat.m in Sources */,
 				33569F82151DC9C700605257 /* AppDelegate.m in Sources */,
 				33569F8F151DCA3800605257 /* GCDAsyncSocket.m in Sources */,
 				33569F90151DCA3800605257 /* GCDAsyncUdpSocket.m in Sources */,

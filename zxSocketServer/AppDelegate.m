@@ -1,4 +1,17 @@
 #import "AppDelegate.h"
+#import "FileTransferFormat.h"
+
+
+NSInteger socket_message_state = -1;
+BOOL have_read_the_message = false;
+NSData *received_message_data = NULL;
+BOOL processing_file = false;
+int max_byte_transfer = 1024;
+@interface AppDelegate()
+
+@property (nonatomic) FileTransferFormat *mySender;
+
+@end
 
 @implementation AppDelegate
 
@@ -19,6 +32,7 @@
 - (IBAction)listen:(id)sender {
     NSLog(@"listen");
     //在这里获取应用程序Documents文件夹里的文件及文件夹列表
+    self.mySender = [FileTransferFormat alloc];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -124,25 +138,38 @@
 {
     NSString *receive = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     [self addText:[NSString stringWithFormat:@"%@:%@",sock.connectedHost,receive]];
-    
+    received_message_data = data;
+    have_read_the_message = false;
     NSString *reply = [NSString stringWithFormat:@"%@:%@",sock.connectedHost,receive];
-    NSLog(s.connectedHost);
-    NSLog(sock.connectedHost);
+  //  NSLog(s.connectedHost);
+  //  NSLog(sock.connectedHost);
     if (s_ocp && [s.connectedHost isEqualToString:sock.connectedHost]) {
-        NSLog(s.connectedHost);
-        [s writeData:[reply dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
-        s_received_mark = true;
-        if (!s_file_trans_mark ) {
-            s_file_trans_mark = true;
+        //NSLog(s.connectedHost);
+        //[s writeData:[reply dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
+        if (!processing_file && [self.mySender convertMsgToInt:receive] == REQUEST_REGISTRATION) {
+            processing_file = true;
+            NSLog(@"receive REQUEST_REGISTRATION");
             dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
                 dispatch_async(queue,//dispatch_get_main_queue(),
-                               ^{
-                                   [self sendTxtFile:@"/Users/hzzhangshuangli/Documents/test.txt" withSender:s];
-                                
-                               });
+                ^{
+                       [self.mySender receiveAndSaveFileswithSender:s withFolder:@"/Users/hzzhangshuangli/Downloads/"];
+                });
             });
+            
         }
+        
+//        if (!s_file_trans_mark ) {
+//            s_file_trans_mark = true;
+//            dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//                dispatch_async(queue,//dispatch_get_main_queue(),
+//                               ^{
+//                                   [self sendTxtFile:@"/Users/hzzhangshuangli/Documents/test.txt" withSender:s];
+//
+//                               });
+//            });
+//        }
         if (s1_ocp) {
             [s1 writeData:[reply dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
         }
