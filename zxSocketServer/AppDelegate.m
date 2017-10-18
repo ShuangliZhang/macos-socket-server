@@ -137,7 +137,7 @@ int max_byte_transfer = 1024;
 -(void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
     NSString *receive = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [self addText:[NSString stringWithFormat:@"%@:%@",sock.connectedHost,receive]];
+ //   [self addText:[NSString stringWithFormat:@"%@:%@",sock.connectedHost,receive]];
     received_message_data = data;
     have_read_the_message = false;
     NSString *reply = [NSString stringWithFormat:@"%@:%@",sock.connectedHost,receive];

@@ -264,7 +264,7 @@
     
     while (true) {
         totalByte = totalByte +[received_message_data length];
-        NSLog(@"write piece %i, %i", [received_message_data length], totalByte);
+     //   NSLog(@"write piece %i, %i", [received_message_data length], totalByte);
         if (!have_read_the_message) {
             have_read_the_message = true;
             if (file_end_mark) {
@@ -314,7 +314,7 @@
     
     while (true) {
         totalByte = totalByte +[received_message_data length];
-        NSLog(@"write piece %i, %i", [received_message_data length], totalByte);
+     //   NSLog(@"write piece %i, %i", [received_message_data length], totalByte);
         if (!have_read_the_message) {
             have_read_the_message = true;
             if (file_end_mark) {
