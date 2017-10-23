@@ -1,4 +1,15 @@
+
+#import <opencv2/core.hpp>
 #import "AppDelegate.h"
+#include <iostream>
+#include "ARSimpleMap.h"
+#include "fileIO.h"
+#include <vector>
+#include <Eigen/Core>
+
+using namespace std;
+
+
 #import "FileTransferFormat.h"
 
 
@@ -29,6 +40,17 @@ int max_byte_transfer = 1024;
 {
     status.string = [status.string stringByAppendingFormat:@"%@\n",str];
 }
+#pragma -mark ----------socket----------
+
+- (IBAction)registration:(id)sender {
+    NSLog(@"test");
+    ARSimpleMap mymap;
+    cv::Mat rt;
+    mymap.computeTransform("/Users/hzzhangshuangli/Documents/keyframe/2017-09-21 14_34_41",
+                           "/Users/hzzhangshuangli/Documents/keyframe/2017-09-21 14_33_22", rt);
+    cout << rt;
+}
+
 - (IBAction)listen:(id)sender {
     NSLog(@"listen");
     //在这里获取应用程序Documents文件夹里的文件及文件夹列表
@@ -105,7 +127,7 @@ int max_byte_transfer = 1024;
     NSString *content = [NSString stringWithContentsOfFile:filename encoding:NSUTF8StringEncoding error:NULL];
     NSData *data = [content dataUsingEncoding:NSUTF8StringEncoding];
     
-    int index = 0;
+    NSUInteger index = 0;
     int totalLen = [content length];
  //   NSData *piece = buffer;
     uint8_t *readBytes = (uint8_t *)[data bytes];
@@ -127,9 +149,7 @@ int max_byte_transfer = 1024;
         index += indexLen;
         while (!s_received_mark)
         {}
-        
-    
-        //}
+
     }
 //    return data;
 }
@@ -158,18 +178,6 @@ int max_byte_transfer = 1024;
             });
             
         }
-        
-//        if (!s_file_trans_mark ) {
-//            s_file_trans_mark = true;
-//            dispatch_queue_t queue = dispatch_queue_create("queue", DISPATCH_QUEUE_CONCURRENT);
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-//                dispatch_async(queue,//dispatch_get_main_queue(),
-//                               ^{
-//                                   [self sendTxtFile:@"/Users/hzzhangshuangli/Documents/test.txt" withSender:s];
-//
-//                               });
-//            });
-//        }
         if (s1_ocp) {
             [s1 writeData:[reply dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
         }
@@ -185,4 +193,6 @@ int max_byte_transfer = 1024;
     }
     
 }
+
+
 @end

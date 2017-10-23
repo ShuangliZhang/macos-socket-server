@@ -15,10 +15,10 @@
 
 
 - (IBAction)listen:(id)sender;
+
 @property (unsafe_unretained) IBOutlet NSTextView *status;
 @property (unsafe_unretained) IBOutlet NSTextField *port;
 @property (unsafe_unretained) IBOutlet NSTextField *host;
-
 
 @property (assign) IBOutlet NSWindow *window;
 

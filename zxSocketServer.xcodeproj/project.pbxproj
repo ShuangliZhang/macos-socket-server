@@ -11,13 +11,23 @@
 		33569F79151DC9C700605257 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33569F77151DC9C700605257 /* InfoPlist.strings */; };
 		33569F7B151DC9C700605257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33569F7A151DC9C700605257 /* main.m */; };
 		33569F7F151DC9C700605257 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 33569F7D151DC9C700605257 /* Credits.rtf */; };
-		33569F82151DC9C700605257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33569F81151DC9C700605257 /* AppDelegate.m */; };
+		33569F82151DC9C700605257 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 33569F81151DC9C700605257 /* AppDelegate.mm */; };
 		33569F85151DC9C700605257 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33569F83151DC9C700605257 /* MainMenu.xib */; };
 		33569F8F151DCA3800605257 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33569F8C151DCA3800605257 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		33569F90151DCA3800605257 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 33569F8E151DCA3800605257 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		33569F96151DCC0E00605257 /* NetFS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33569F95151DCC0E00605257 /* NetFS.framework */; };
 		33569F9D151DCE4300605257 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33569F9C151DCE4300605257 /* Security.framework */; };
 		BF2065481F7CE63F00B3C979 /* FileTransferFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2065471F7CE63E00B3C979 /* FileTransferFormat.m */; };
+		BFB355A11F977A480057ED27 /* libopencv_xfeatures2d.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB3559F1F977A480057ED27 /* libopencv_xfeatures2d.3.3.dylib */; };
+		BFB355A21F977A480057ED27 /* libopencv_imgcodecs.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB355A01F977A480057ED27 /* libopencv_imgcodecs.3.3.0.dylib */; };
+		BFB355A41F977A530057ED27 /* libopencv_imgproc.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB355A31F977A530057ED27 /* libopencv_imgproc.3.3.0.dylib */; };
+		BFB355A61F977A5B0057ED27 /* libopencv_highgui.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB355A51F977A5B0057ED27 /* libopencv_highgui.3.3.0.dylib */; };
+		BFB355A81F977A600057ED27 /* libopencv_features2d.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB355A71F977A600057ED27 /* libopencv_features2d.3.3.0.dylib */; };
+		BFB355AA1F977A690057ED27 /* libopencv_calib3d.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB355A91F977A690057ED27 /* libopencv_calib3d.3.3.0.dylib */; };
+		BFB355AC1F977A6D0057ED27 /* libopencv_core.3.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB355AB1F977A6D0057ED27 /* libopencv_core.3.3.0.dylib */; };
+		BFB355B31F977B170057ED27 /* fileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFB355AD1F977B160057ED27 /* fileIO.cpp */; };
+		BFB355B41F977B170057ED27 /* ARSimpleMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFB355B11F977B160057ED27 /* ARSimpleMap.cpp */; };
+		BFB355B51F977B170057ED27 /* ARSimpleFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFB355B21F977B160057ED27 /* ARSimpleFrame.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +42,7 @@
 		33569F7C151DC9C700605257 /* zxSocketServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zxSocketServer-Prefix.pch"; sourceTree = "<group>"; };
 		33569F7E151DC9C700605257 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		33569F80151DC9C700605257 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		33569F81151DC9C700605257 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33569F81151DC9C700605257 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		33569F84151DC9C700605257 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		33569F8B151DCA3800605257 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		33569F8C151DCA3800605257 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
@@ -42,6 +52,19 @@
 		33569F9C151DCE4300605257 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF2065461F7CE63E00B3C979 /* FileTransferFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileTransferFormat.h; sourceTree = "<group>"; };
 		BF2065471F7CE63E00B3C979 /* FileTransferFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileTransferFormat.m; sourceTree = "<group>"; };
+		BFB3559F1F977A480057ED27 /* libopencv_xfeatures2d.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_xfeatures2d.3.3.dylib; path = ../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_xfeatures2d.3.3.dylib; sourceTree = "<group>"; };
+		BFB355A01F977A480057ED27 /* libopencv_imgcodecs.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgcodecs.3.3.0.dylib; path = ../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_imgcodecs.3.3.0.dylib; sourceTree = "<group>"; };
+		BFB355A31F977A530057ED27 /* libopencv_imgproc.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.3.3.0.dylib; path = ../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_imgproc.3.3.0.dylib; sourceTree = "<group>"; };
+		BFB355A51F977A5B0057ED27 /* libopencv_highgui.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.3.3.0.dylib; path = ../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_highgui.3.3.0.dylib; sourceTree = "<group>"; };
+		BFB355A71F977A600057ED27 /* libopencv_features2d.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_features2d.3.3.0.dylib; path = ../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_features2d.3.3.0.dylib; sourceTree = "<group>"; };
+		BFB355A91F977A690057ED27 /* libopencv_calib3d.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.3.0.dylib; path = ../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_calib3d.3.3.0.dylib; sourceTree = "<group>"; };
+		BFB355AB1F977A6D0057ED27 /* libopencv_core.3.3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.3.3.0.dylib; path = ../../../../usr/local/Cellar/opencv/3.3.0_3/lib/libopencv_core.3.3.0.dylib; sourceTree = "<group>"; };
+		BFB355AD1F977B160057ED27 /* fileIO.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = fileIO.cpp; path = ../../MultiUser_AR/src/fileIO.cpp; sourceTree = "<group>"; };
+		BFB355AE1F977B160057ED27 /* fileIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fileIO.h; path = ../../MultiUser_AR/src/fileIO.h; sourceTree = "<group>"; };
+		BFB355AF1F977B160057ED27 /* ARSimpleMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ARSimpleMap.h; path = ../../MultiUser_AR/src/ARSimpleMap.h; sourceTree = "<group>"; };
+		BFB355B01F977B160057ED27 /* ARSimpleFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ARSimpleFrame.h; path = ../../MultiUser_AR/src/ARSimpleFrame.h; sourceTree = "<group>"; };
+		BFB355B11F977B160057ED27 /* ARSimpleMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ARSimpleMap.cpp; path = ../../MultiUser_AR/src/ARSimpleMap.cpp; sourceTree = "<group>"; };
+		BFB355B21F977B160057ED27 /* ARSimpleFrame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ARSimpleFrame.cpp; path = ../../MultiUser_AR/src/ARSimpleFrame.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +75,13 @@
 				33569F9D151DCE4300605257 /* Security.framework in Frameworks */,
 				33569F96151DCC0E00605257 /* NetFS.framework in Frameworks */,
 				33569F6F151DC9C700605257 /* Cocoa.framework in Frameworks */,
+				BFB355A11F977A480057ED27 /* libopencv_xfeatures2d.3.3.dylib in Frameworks */,
+				BFB355A41F977A530057ED27 /* libopencv_imgproc.3.3.0.dylib in Frameworks */,
+				BFB355A21F977A480057ED27 /* libopencv_imgcodecs.3.3.0.dylib in Frameworks */,
+				BFB355A61F977A5B0057ED27 /* libopencv_highgui.3.3.0.dylib in Frameworks */,
+				BFB355A81F977A600057ED27 /* libopencv_features2d.3.3.0.dylib in Frameworks */,
+				BFB355AA1F977A690057ED27 /* libopencv_calib3d.3.3.0.dylib in Frameworks */,
+				BFB355AC1F977A6D0057ED27 /* libopencv_core.3.3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +110,13 @@
 		33569F6D151DC9C700605257 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFB355AB1F977A6D0057ED27 /* libopencv_core.3.3.0.dylib */,
+				BFB355A91F977A690057ED27 /* libopencv_calib3d.3.3.0.dylib */,
+				BFB355A71F977A600057ED27 /* libopencv_features2d.3.3.0.dylib */,
+				BFB355A51F977A5B0057ED27 /* libopencv_highgui.3.3.0.dylib */,
+				BFB355A31F977A530057ED27 /* libopencv_imgproc.3.3.0.dylib */,
+				BFB355A01F977A480057ED27 /* libopencv_imgcodecs.3.3.0.dylib */,
+				BFB3559F1F977A480057ED27 /* libopencv_xfeatures2d.3.3.dylib */,
 				33569F6E151DC9C700605257 /* Cocoa.framework */,
 				33569F70151DC9C700605257 /* Other Frameworks */,
 			);
@@ -99,6 +136,12 @@
 		33569F74151DC9C700605257 /* zxSocketServer */ = {
 			isa = PBXGroup;
 			children = (
+				BFB355B21F977B160057ED27 /* ARSimpleFrame.cpp */,
+				BFB355B01F977B160057ED27 /* ARSimpleFrame.h */,
+				BFB355B11F977B160057ED27 /* ARSimpleMap.cpp */,
+				BFB355AF1F977B160057ED27 /* ARSimpleMap.h */,
+				BFB355AD1F977B160057ED27 /* fileIO.cpp */,
+				BFB355AE1F977B160057ED27 /* fileIO.h */,
 				BF2065461F7CE63E00B3C979 /* FileTransferFormat.h */,
 				BF2065471F7CE63E00B3C979 /* FileTransferFormat.m */,
 				33569F8B151DCA3800605257 /* GCDAsyncSocket.h */,
@@ -106,7 +149,7 @@
 				33569F8D151DCA3800605257 /* GCDAsyncUdpSocket.h */,
 				33569F8E151DCA3800605257 /* GCDAsyncUdpSocket.m */,
 				33569F80151DC9C700605257 /* AppDelegate.h */,
-				33569F81151DC9C700605257 /* AppDelegate.m */,
+				33569F81151DC9C700605257 /* AppDelegate.mm */,
 				33569F83151DC9C700605257 /* MainMenu.xib */,
 				33569F75151DC9C700605257 /* Supporting Files */,
 			);
@@ -191,9 +234,12 @@
 			files = (
 				33569F7B151DC9C700605257 /* main.m in Sources */,
 				BF2065481F7CE63F00B3C979 /* FileTransferFormat.m in Sources */,
-				33569F82151DC9C700605257 /* AppDelegate.m in Sources */,
+				BFB355B51F977B170057ED27 /* ARSimpleFrame.cpp in Sources */,
+				33569F82151DC9C700605257 /* AppDelegate.mm in Sources */,
 				33569F8F151DCA3800605257 /* GCDAsyncSocket.m in Sources */,
+				BFB355B41F977B170057ED27 /* ARSimpleMap.cpp in Sources */,
 				33569F90151DCA3800605257 /* GCDAsyncUdpSocket.m in Sources */,
+				BFB355B31F977B170057ED27 /* fileIO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +323,22 @@
 		33569F89151DC9C700605257 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zxSocketServer/zxSocketServer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/opencv,
+					/usr/local/include,
+					/usr/local/include/eigen3,
+				);
 				INFOPLIST_FILE = "zxSocketServer/zxSocketServer-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv/3.3.0_3/lib,
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,10 +347,22 @@
 		33569F8A151DC9C700605257 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zxSocketServer/zxSocketServer-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/opencv,
+					/usr/local/include,
+					/usr/local/include/eigen3,
+				);
 				INFOPLIST_FILE = "zxSocketServer/zxSocketServer-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/opencv/3.3.0_3/lib,
+					/usr/local/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
